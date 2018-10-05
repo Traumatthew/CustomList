@@ -7,7 +7,7 @@ namespace UnitTestProject1
     public class UnitTest1
     {
         [TestMethod]
-        public void Add_TestMethod1()
+        public void Add_ItemtoArray()
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>();
@@ -21,7 +21,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void Add_TestMethod2()
+        public void Add_CheckCount()
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>();
@@ -36,7 +36,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void Add_TestMethod3()
+        public void Add_TwoItems()
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>();
@@ -49,11 +49,68 @@ namespace UnitTestProject1
             customList.Add(value1);
 
             //Assert
-            Assert.AreEqual(value, customList[0]);
+            Assert.AreEqual(value, value1, customList[0]);
+        }
+        [TestMethod]
+        public void MakeArrayLarger()
+        {
+            //Arrange
+            int expectedCount = 6;
+            CustomList<int> one = new CustomList<int>();
+            
+                one.Add(1);
+                one.Add(2);
+                one.Add(3);
+                one.Add(4);
+                one.Add(5);
+                one.Add(6);
+
+                CustomList<int> expectedResult = new CustomList<int>();
+                expectedResult.Add(1);
+                expectedResult.Add(2);
+                expectedResult.Add(3);
+                expectedResult.Add(4);
+                expectedResult.Add(5);
+                expectedResult.Add(6);
+
+                //Act
+               
+
+                //Assert
+                Assert.AreEqual(expectedCount, one.Count);
+            
+        }
+
+        public void CheckIndex_OfArray()
+        {
+            //Arrange
+            CustomList<int> one = new CustomList<int>();
+            
+                one.Add(1);
+                one.Add(2);
+                one.Add(3);
+                one.Add(4);
+                one.Add(5);
+                one.Add(6);
+
+                CustomList<int> expectedResult = new CustomList<int>();
+                expectedResult.Add(1);
+                expectedResult.Add(2);
+                expectedResult.Add(3);
+                expectedResult.Add(4);
+                expectedResult.Add(5);
+                expectedResult.Add(6);
+
+                //Act
+               
+
+                //Assert
+                Assert.AreEqual(expectedResult[5], one[5]);
+            
         }
 
         [TestMethod]
-        public void Remove_TestMethod1()
+        public void Remove_NumberFromList()
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>();
@@ -70,7 +127,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void Remove_TestMethod2()
+        public void Remove_Number_CheckCount()
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>();
@@ -105,10 +162,10 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void AdditionOverload_TwoStrings()
+        public void Add_TwoLists_Together()
         {
             //Arrange
-            CustomList<int> one = new CustomList<int>(); {
+            CustomList<int> one = new CustomList<int>(); 
             CustomList<int> two = new CustomList<int>();
             one.Add(1);
             one.Add(2);
@@ -129,10 +186,12 @@ namespace UnitTestProject1
             CustomList<int> result = one + two;
 
             //Assert
-            Assert.AreEqual(expectedResult[3], result[3]);
+            Assert.AreEqual(expectedResult, result);
         }
-        public void MinusOverload_TwoStrings()
+
+        public void Zip_TwoLists_Together()
         {
+            //Arrange
             CustomList<int> odd = new CustomList<int>();
             CustomList<int> even = new CustomList<int>();
             odd.Add(1);
@@ -146,17 +205,23 @@ namespace UnitTestProject1
             even.Add(8);
 
             CustomList<int> expectedResult = new CustomList<int>();
-            expectedResult.Remove(1);
-            expectedResult.Remove(2);
+            expectedResult.Add(1);
+            expectedResult.Add(2);
+            expectedResult.Add(3);
+            expectedResult.Add(4);
+            expectedResult.Add(5);
+            expectedResult.Add(6);
+            expectedResult.Add(7);
+            expectedResult.Add(8);
 
             //Act
-            CustomList<int> result = odd - even;
+            CustomList<int> result = odd + even;
 
             //Assert
 
-            Assert.AreEqual(expectedResult[3], result[]);
+            Assert.AreEqual(expectedResult[], result[]);
 
-
+          
         }
     }
 }

@@ -1,0 +1,7 @@
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\MyCustomListProject\obj\Debug\MyCustomListProject.csprojAssemblyReference.cache
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\MyCustomListProject\obj\Debug\MyCustomListProject.csproj.CoreCompileInputs.cache
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\MyCustomListProject\bin\Debug\MyCustomListProject.exe.config
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\MyCustomListProject\bin\Debug\MyCustomListProject.exe
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\MyCustomListProject\bin\Debug\MyCustomListProject.pdb
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\MyCustomListProject\obj\Debug\MyCustomListProject.exe
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\MyCustomListProject\obj\Debug\MyCustomListProject.pdb

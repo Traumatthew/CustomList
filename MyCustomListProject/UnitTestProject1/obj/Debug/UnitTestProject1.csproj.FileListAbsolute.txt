@@ -1,0 +1,2 @@
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\obj\Debug\UnitTestProject1.csprojAssemblyReference.cache
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CoreCompileInputs.cache

@@ -10,9 +10,16 @@ namespace MyCustomListProject
     {
         
         private T[] items = new T[5]; //Array
-        private int count = 0;
+        
         public int Count { get { return count; } }
+        private int count = 0;
         private int capacity = 4;
+
+        public T this[int i]
+        {
+            get { return items[i]; }
+            set { items[i] = value; }
+        }
 
         public void Add(T value)
         {
@@ -29,26 +36,41 @@ namespace MyCustomListProject
             }
             else if (items.Length <= capacity)
             {
-                items.count = value;
+                items[count] = value;
             }
             
         }
 
-
-        public T this[int i]
+        public void Remove(T value)
         {
-            get { return items[i]; }
-            set { items[i] = value; }
-        }
-        private void IncreaseItemSize()
-        {
-            if (items)
+            T[] temp = new T[capacity];
+            int itemsRemoved = 0;
+            for (int i = 0; i < count; i++)
+            {
+                if (!items[i].Equals(value))
+                {
+                    temp[i - itemsRemoved] = items[i];
+                }
+                else
+                {
+                    itemsRemoved = 1;
+                }
+            }
+            
+            count--;
+            items = temp;
+           
         }
 
-        public bool Remove()
-        {
-
-        }
+        //public void SetCount(T value)
+        //{
+        //    count = 0;
+        //    foreach (item in T)
+        //    {
+        //        count++;
+        //    }
+        //}
+        
     }
    
 }

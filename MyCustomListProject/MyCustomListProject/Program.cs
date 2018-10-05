@@ -10,12 +10,16 @@ namespace MyCustomListProject
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            CustomList<int> one = new CustomList<int>();
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            one.Add(1);
+            one.Add(2);
+            one.Add(3);
+            one.Add(4);
+            one.Add(5);
+            one.Add(6);
+
+            one.Remove(3);
         }
     }
 }

@@ -10,16 +10,16 @@ namespace MyCustomListProject
     {
         static void Main(string[] args)
         {
-            CustomList<int> one = new CustomList<int>();
+            CustomList<int> listone = new CustomList<int>();
 
-            one.Add(1);
-            one.Add(2);
-            one.Add(3);
-            one.Add(4);
-            one.Add(5);
-            one.Add(6);
+            listone.Add(1);
+            listone.Add(2);
+            listone.Add(3);
+            listone.Add(4);
+            listone.Add(5);
+            listone.Add(6);
 
-            one.Remove(3);
+            listone.Remove(3);
         }
     }
 }

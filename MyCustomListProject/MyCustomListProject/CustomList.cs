@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,14 +7,28 @@ using System.Threading.Tasks;
 
 namespace MyCustomListProject
 {
-    public class CustomList<T>
+    public class CustomList<T> : IEnumerable<T>
     {
-        
+
         private T[] items = new T[5]; //Array
-        
         public int Count { get { return count; } }
         private int count = 0;
         private int capacity = 4;
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < count; i++)
+            {
+                yield return items[i];
+            }
+
+        }
+
 
         public T this[int i]
         {
@@ -56,21 +71,28 @@ namespace MyCustomListProject
                     itemsRemoved = 1;
                 }
             }
-            
             count--;
             items = temp;
-           
         }
 
-        //public void SetCount(T value)
-        //{
-        //    count = 0;
-        //    foreach (item in T)
-        //    {
-        //        count++;
-        //    }
-        //}
+        public override string ToString()
+        {
+            for(int i = 0; i < Count; i++)
+            {
+
+
+            }
+
+            return base.ToString();
+        }
+
+        
+        public static CustomList<T> operator +(CustomList<T> customList, CustomList<T> customList2)
+        {
+
+        }
+
         
     }
-   
+
 }

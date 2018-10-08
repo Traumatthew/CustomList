@@ -80,9 +80,9 @@ namespace MyCustomListProject
         {
             CustomList<T> customList = new CustomList<T>();
             StringBuilder build = new StringBuilder();
-            foreach (T item in customList)
+            foreach (T item in items)
             {
-                build.Append(customList).Append(", ");
+                build.Append(items).Append(", ");
             }
             string result = build.ToString();
             return result;
@@ -94,15 +94,14 @@ namespace MyCustomListProject
             CustomList<T> customList = new CustomList<T>();
              for (int i = 0; i <= listOne.count-1; i++)
             {
-                customList.Add(listOne);
-                return new CustomList<T>();
+                customList.Add(listOne[i]);  
             }
 
              for (int i = 0; i <= listTwo.count-1; i++)
             {
-                customList.Add(listTwo);
-                return new CustomList<T>();
+                customList.Add(listTwo[i]);   
             }
+            return new CustomList<T>();
         }
 
 

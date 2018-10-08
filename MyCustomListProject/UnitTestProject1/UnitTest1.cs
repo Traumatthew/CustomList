@@ -57,14 +57,14 @@ namespace UnitTestProject1
         {
             //Arrange
             int expectedCount = 6;
-            CustomList<int> listone = new CustomList<int>();
+            CustomList<int> listOne = new CustomList<int>();
 
-            listone.Add(1);
-            listone.Add(2);
-            listone.Add(3);
-            listone.Add(4);
-            listone.Add(5);
-            listone.Add(6);
+            listOne.Add(1);
+            listOne.Add(2);
+            listOne.Add(3);
+            listOne.Add(4);
+            listOne.Add(5);
+            listOne.Add(6);
 
             //Act
             CustomList<int> expectedResult = new CustomList<int>();
@@ -76,7 +76,7 @@ namespace UnitTestProject1
             expectedResult.Add(6);
 
             //Assert
-            Assert.AreEqual(expectedCount, listone.Count);
+            Assert.AreEqual(expectedCount, listOne.Count);
 
         }
 
@@ -216,20 +216,14 @@ namespace UnitTestProject1
             listTwo.Add(4);
             listTwo.Add(5);
             listTwo.Add(6);
-
-            CustomList<int> expectedResult = new CustomList<int>();
-            expectedResult.Add(1);
-            expectedResult.Add(2);
-            expectedResult.Add(3);
-            expectedResult.Add(4);
-            expectedResult.Add(5);
-            expectedResult.Add(6);
+            CustomList<int> customList = new CustomList<int>();
+            customList = listOne + listTwo; 
 
             //Act
-            CustomList<int> newList = listOne + listTwo;
+            
 
             //Assert
-            Assert.AreEqual(expectedResult, newList);
+            Assert.AreEqual(6, customList[5]);
         }
 
         [TestMethod]
@@ -258,7 +252,7 @@ namespace UnitTestProject1
             CustomList<int> result = listOne + listTwo;
 
             //Assert
-            Assert.AreEqual(result, listOne[3]);
+            Assert.AreEqual(result[3], listOne[3]);
         }
 
         [TestMethod]

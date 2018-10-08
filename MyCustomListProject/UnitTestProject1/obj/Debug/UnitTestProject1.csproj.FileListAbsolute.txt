@@ -1,2 +1,17 @@
 C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\obj\Debug\UnitTestProject1.csprojAssemblyReference.cache
 C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CoreCompileInputs.cache
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\bin\Debug\MyCustomListProject.exe
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\bin\Debug\MyCustomListProject.pdb
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\bin\Debug\MyCustomListProject.exe.config
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CopyComplete
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\Matthew Trau\source\repos\CustomList\MyCustomListProject\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

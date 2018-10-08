@@ -19,7 +19,7 @@ namespace UnitTestProject1
             //Assert
             Assert.AreEqual(value, customList[0]);
         }
-   
+
 
         [TestMethod]
         public void AddItem_CheckCount()
@@ -74,10 +74,10 @@ namespace UnitTestProject1
             expectedResult.Add(4);
             expectedResult.Add(5);
             expectedResult.Add(6);
-              
+
             //Assert
             Assert.AreEqual(expectedCount, listone.Count);
-            
+
         }
 
         [TestMethod]
@@ -92,18 +92,18 @@ namespace UnitTestProject1
             listone.Add(5);
             listone.Add(6);
 
-                //Act
-                CustomList<int> expectedResult = new CustomList<int>();
-                expectedResult.Add(1);
-                expectedResult.Add(2);
-                expectedResult.Add(3);
-                expectedResult.Add(4);
-                expectedResult.Add(5);
-                expectedResult.Add(6);
+            //Act
+            CustomList<int> expectedResult = new CustomList<int>();
+            expectedResult.Add(1);
+            expectedResult.Add(2);
+            expectedResult.Add(3);
+            expectedResult.Add(4);
+            expectedResult.Add(5);
+            expectedResult.Add(6);
 
-                //Assert
-                Assert.AreEqual(expectedResult[5], listone[5]);
-            
+            //Assert
+            Assert.AreEqual(expectedResult[5], listone[5]);
+
         }
 
         [TestMethod]
@@ -193,23 +193,55 @@ namespace UnitTestProject1
             customList.Add(3);
             customList.Add(4);
             customList.Add(5);
+            string expected = "1, 2, 3, 4, 5,";
 
             //Act
-            string result = customList.ToString();
+            string actual = customList.ToString();
+
 
             //Assert
-            Assert.IsNotNull(result);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void Add_TwoLists_Together()
         {
             //Arrange
-            CustomList<int> listOne = new CustomList<int>(); 
+            CustomList<int> listOne = new CustomList<int>();
             CustomList<int> listTwo = new CustomList<int>();
             listOne.Add(1);
             listOne.Add(2);
             listOne.Add(3);
+
+            listTwo.Add(4);
+            listTwo.Add(5);
+            listTwo.Add(6);
+
+            CustomList<int> expectedResult = new CustomList<int>();
+            expectedResult.Add(1);
+            expectedResult.Add(2);
+            expectedResult.Add(3);
+            expectedResult.Add(4);
+            expectedResult.Add(5);
+            expectedResult.Add(6);
+
+            //Act
+            CustomList<int> newList = listOne + listTwo;
+
+            //Assert
+            Assert.AreEqual(expectedResult, newList);
+        }
+
+        [TestMethod]
+        public void Add_TwoLists_CheckIndex()
+        {
+            //Arrange
+            CustomList<int> listOne = new CustomList<int>();
+            CustomList<int> listTwo = new CustomList<int>();
+            listOne.Add(1);
+            listOne.Add(2);
+            listOne.Add(3);
+
             listTwo.Add(4);
             listTwo.Add(5);
             listTwo.Add(6);
@@ -226,8 +258,9 @@ namespace UnitTestProject1
             CustomList<int> result = listOne + listTwo;
 
             //Assert
-            Assert.AreEqual(expectedResult, result);
+            Assert.AreEqual(result, listOne[3]);
         }
+
         [TestMethod]
         public void Zip_TwoLists_Together()
         {
@@ -259,7 +292,7 @@ namespace UnitTestProject1
 
             //Assert
 
-            Assert.AreEqual(expectedResult[], result[]);
+            Assert.AreEqual(expectedResult, result);
 
           
         }

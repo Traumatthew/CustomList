@@ -11,7 +11,7 @@ namespace MyCustomListProject
     {
 
         private T[] items = new T[5]; //Array
-        public int Count { get { return count; } }
+        public int Count { get { return count; } } //count
         private int count = 0;
         private int capacity = 4;
 
@@ -68,31 +68,44 @@ namespace MyCustomListProject
                 }
                 else
                 {
-                    itemsRemoved = 1;
+                    itemsRemoved = -1;
                 }
             }
             count--;
             items = temp;
         }
 
-        CustomList<T> customList = new CustomList<T>();
-        public override void ToString()
+        
+        public override string ToString()
         {
-            StringBuilder builder = new StringBuilder();
-            foreach (T customList in customList)
+            CustomList<T> customList = new CustomList<T>();
+            StringBuilder build = new StringBuilder();
+            foreach (T item in customList)
             {
-                builder.Append(customList).Append(" ");
+                build.Append(customList).Append(", ");
             }
-            string result = builder.ToString();
+            string result = build.ToString();
+            return result;
         }
 
-        
-        public static void CustomList<T> operator +()
+
+        public static CustomList<T> operator +(CustomList<T> listOne, CustomList<T> listTwo)
         {
+            CustomList<T> customList = new CustomList<T>();
+             for (int i = 0; i <= listOne.count-1; i++)
+            {
+                customList.Add(listOne);
+                return new CustomList<T>();
+            }
 
+             for (int i = 0; i <= listTwo.count-1; i++)
+            {
+                customList.Add(listTwo);
+                return new CustomList<T>();
+            }
         }
 
-        
+
     }
 
 }

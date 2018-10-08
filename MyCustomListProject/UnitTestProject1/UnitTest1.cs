@@ -7,7 +7,7 @@ namespace UnitTestProject1
     public class UnitTest1
     {
         [TestMethod]
-        public void Add_ItemtoArray()
+        public void Add_ItemtoEmptyArray()
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>();
@@ -22,7 +22,7 @@ namespace UnitTestProject1
    
 
         [TestMethod]
-        public void Add_CheckCount()
+        public void AddItem_CheckCount()
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>();
@@ -37,7 +37,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void Add_TwoItems()
+        public void AddTwoItems_CheckIndex()
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>();

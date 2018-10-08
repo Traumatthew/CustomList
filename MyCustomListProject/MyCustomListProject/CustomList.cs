@@ -77,13 +77,12 @@ namespace MyCustomListProject
 
         public override string ToString()
         {
+            CustomList<T> customList = new CustomList<T>();
             for(int i = 0; i < Count; i++)
             {
-
+              
 
             }
-
-            return base.ToString();
         }
 
         

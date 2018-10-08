@@ -184,6 +184,24 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
+        public void MakeAString()
+        {
+            //Arrange
+            CustomList<int> customList = new CustomList<int>();
+            customList.Add(1);
+            customList.Add(2);
+            customList.Add(3);
+            customList.Add(4);
+            customList.Add(5);
+
+            //Act
+            string result = customList.ToString();
+
+            //Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
         public void Add_TwoLists_Together()
         {
             //Arrange

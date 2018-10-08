@@ -75,18 +75,19 @@ namespace MyCustomListProject
             items = temp;
         }
 
-        public override string ToString()
+        CustomList<T> customList = new CustomList<T>();
+        public override void ToString()
         {
-            CustomList<T> customList = new CustomList<T>();
-            for(int i = 0; i < Count; i++)
+            StringBuilder builder = new StringBuilder();
+            foreach (T customList in customList)
             {
-              
-
+                builder.Append(customList).Append(" ");
             }
+            string result = builder.ToString();
         }
 
         
-        public static CustomList<T> operator +(CustomList<T> customList, CustomList<T> customList2)
+        public static void CustomList<T> operator +()
         {
 
         }

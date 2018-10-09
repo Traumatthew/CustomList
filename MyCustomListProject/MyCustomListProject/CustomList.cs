@@ -10,10 +10,10 @@ namespace MyCustomListProject
     public class CustomList<T> : IEnumerable<T>
     {
 
-        private T[] items = new T[5]; //Array
-        public int Count { get { return count; } } //count
+        private T[] items = new T[6]; //Array
         private int count = 0;
-        private int capacity = 4;
+        public int Count { get { return count; } } //count
+        private int capacity = 5;
 
         IEnumerator IEnumerable.GetEnumerator()
         {
@@ -38,8 +38,8 @@ namespace MyCustomListProject
 
         public void Add(T value)
         {
-            if (items.Length > capacity)
-            {
+            //if (items.Length > capacity)
+            //{
                 T[] temp = new T[capacity * 2];
                 for (int i = 0; i < count; i++)
                 {
@@ -48,11 +48,11 @@ namespace MyCustomListProject
                 temp[count] = value;
                 count++;
                 items = temp;
-            }
-            else if (items.Length <= capacity)
-            {
-                items[count] = value;
-            }
+            //}
+            //else if (items.Length <= capacity)
+            //{
+            //    items[count] = value;
+            //}
             
         }
 
@@ -82,7 +82,7 @@ namespace MyCustomListProject
             StringBuilder build = new StringBuilder();
             foreach (T item in items)
             {
-                build.Append(items).Append(", ");
+                build.Append(items).Append(" ");
             }
             string result = build.ToString();
             return result;
@@ -104,7 +104,19 @@ namespace MyCustomListProject
             return new CustomList<T>();
         }
 
+        public static CustomList<T> operator -(CustomList<T> listOne, CustomList<T> listTwo)
+        {
+            CustomList<T> customList = new CustomList<T>();
+            for (int i = 0; i <= listOne.count; i++)
+            {
+                for (int j = 0; j <= listTwo.count; j++)
+                {
+                    
 
-    }
+                }
+            }
+            return customList;
+        }
+    } 
 
 }

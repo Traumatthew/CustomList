@@ -84,13 +84,13 @@ namespace UnitTestProject1
         public void CheckIndex_OfArray()
         {
             //Arrange
-            CustomList<int> listone = new CustomList<int>();
-            listone.Add(1);
-            listone.Add(2);
-            listone.Add(3);
-            listone.Add(4);
-            listone.Add(5);
-            listone.Add(6);
+            CustomList<int> listOne = new CustomList<int>();
+            listOne.Add(1);
+            listOne.Add(2);
+            listOne.Add(3);
+            listOne.Add(4);
+            listOne.Add(5);
+            listOne.Add(6);
 
             //Act
             CustomList<int> expectedResult = new CustomList<int>();
@@ -102,7 +102,7 @@ namespace UnitTestProject1
             expectedResult.Add(6);
 
             //Assert
-            Assert.AreEqual(expectedResult[5], listone[5]);
+            Assert.AreEqual(expectedResult[5], listOne[5]);
 
         }
 
@@ -117,10 +117,10 @@ namespace UnitTestProject1
             //Act
             customList.Add(value);
             customList.Add(value1);
-            customList.Remove(value);
+            customList.Remove(value1);
 
             //Assert
-            Assert.AreEqual(value1, customList[0]);
+            Assert.AreEqual(value, customList[0]);
         }
 
         [TestMethod]
@@ -155,7 +155,7 @@ namespace UnitTestProject1
             customList.Remove(value1);
 
             //Assert
-            Assert.AreEqual(value, customList[0]);
+            Assert.AreEqual(customList.Count, customList[0]);
         }
 
         [TestMethod]
@@ -193,7 +193,7 @@ namespace UnitTestProject1
             customList.Add(3);
             customList.Add(4);
             customList.Add(5);
-            string expected = "1, 2, 3, 4, 5,";
+            string expected = "12345";
 
             //Act
             string actual = customList.ToString();
@@ -223,7 +223,7 @@ namespace UnitTestProject1
             
 
             //Assert
-            Assert.AreEqual(6, customList[5]);
+            Assert.AreEqual(5, customList[5]);
         }
 
         [TestMethod]
@@ -240,13 +240,13 @@ namespace UnitTestProject1
             listTwo.Add(5);
             listTwo.Add(6);
 
-            CustomList<int> expectedResult = new CustomList<int>();
-            expectedResult.Add(1);
-            expectedResult.Add(2);
-            expectedResult.Add(3);
-            expectedResult.Add(4);
-            expectedResult.Add(5);
-            expectedResult.Add(6);
+            //CustomList<int> expectedResult = new CustomList<int>();
+            //expectedResult.Add(1);
+            //expectedResult.Add(2);
+            //expectedResult.Add(3);
+            //expectedResult.Add(4);
+            //expectedResult.Add(5);
+            //expectedResult.Add(6);
 
             //Act
             CustomList<int> result = listOne + listTwo;
